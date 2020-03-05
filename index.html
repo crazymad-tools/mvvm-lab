@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>mvvm测试</title>
+  <script src="mvvm.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    {{a.b}}
+    <input v-model="c" type="number" />
+    <span>{{c}}</span>
+    <div>
+      <p>求和的值是{{sum}}</p>
+    </div>
+  </div>
+  <script>
+    let mvvm = new Mvvm({
+      el: '#app',
+      data: {
+        list: [1, 2, 3],
+        a: {
+          b: 1
+        },
+        c: 2
+      },
+      mounted() {
+        setTimeout(() => {
+          console.log('hello world');
+        }, 1000);
+      },
+      computed: {
+        sum() {
+          return this.list.reduce((sum, val) => sum + val);
+        },
+        noop() { },
+      }
+    })
+  </script>
+</body>
+
+</html>
