@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>test</title>
+</head>
+
+<body>
+  &lt;&gt;<h3>hello world<//h3>
+  <template style="display: none;">
+    <div id="main">
+      hello world
+      <App>
+        <Header />
+        <Main></Main>
+        <Footer />
+      </App>
+      lalalal
+    </div>
+  </template>
+  <script>
+
+    function findChild (parent) {
+      for (let node of parent.childNodes) {
+        console.log(node.nodeName, node.nodeType);
+        node.childNodes && findChild(node);
+      }
+    }
+
+    window.onload = () => {
+      let template = document.getElementsByTagName('template');
+      findChild(template[0].content);
+    }
+  </script>
+</body>
+
+</html>

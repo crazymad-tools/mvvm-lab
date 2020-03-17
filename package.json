@@ -1,0 +1,33 @@
+{
+  "name": "mvvm-lab",
+  "version": "0.0.0",
+  "description": "mvvm lab",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node ./scripts/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazymad-tools/mvvm-lab.git"
+  },
+  "keywords": [
+    "mvvm"
+  ],
+  "author": "crazymad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crazymad-tools/mvvm-lab/issues"
+  },
+  "homepage": "https://github.com/crazymad-tools/mvvm-lab#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
